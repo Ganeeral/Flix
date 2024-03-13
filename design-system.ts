@@ -2,7 +2,7 @@
 export const screens = {
     laptop: '1536px',
     tablet: '1100px',
-    'tablet-s': '769px',
+    'tablet-s': '850px',
     mobile: '577px',
     flix: '651px'
 }

@@ -20,7 +20,7 @@ export default function RootLayout({
         <div className="flex h-full w-full">
           <SideBar />
           <SideBarMobile/>
-          <div id="page">
+          <div id="page" className="h-[3000px]">
             <Header />
             {children}
           </div>

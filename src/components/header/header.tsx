@@ -6,7 +6,7 @@ import cn from "classnames";
 const header = () => {
   return (
     <>
-      <header className="py-4 px-8 flex gap-x-[20px] items-center">
+      <header className="py-4 px-8 flex gap-x-[20px] items-center duration-300">
         <div
           className={cn("flex justify-end flex-grow", "flix:justify-center")}
         >

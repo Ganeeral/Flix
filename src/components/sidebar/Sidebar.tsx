@@ -82,6 +82,7 @@ const chanel = [
 ];
 
 export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [active, setActive] = useState(false);
   const [isColumn, setIsColumn] = useState(false);
   const controls = useAnimation();
@@ -137,11 +138,24 @@ export default function Home() {
     showMore();
   }, []);
 
+  useEffect(() => {
+    function handleScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setIsScrolled(scrollTop > 0.); // Если страница прокручена вниз, устанавливаем состояние isScrolled в true
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="max-w-[248px] hidden flix:block">
+    <div className={`max-w-[248px] hidden flix:block `}>
       <motion.div
         animate={controls}
-        className="sideBar max-w-[248px] animate duration-300 relative flex flex-col py-10 h-screen group "
+        className={`sideBar max-w-[248px] animate duration-300 relative flex flex-col py-10 h-screen group`} style={{ position: isScrolled ? 'fixed' : 'relative'}}
       >
         <div
           className=" flex items-center"

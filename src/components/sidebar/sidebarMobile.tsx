@@ -133,7 +133,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="max-w-[248px] block flix:hidden">
+    <div className="max-w-[248px] z-10 absolute block flix:hidden">
       <motion.div
         animate={controls}
         className="sideBar max-w-[248px] animate duration-300 relative flex flex-col h-screen group "
