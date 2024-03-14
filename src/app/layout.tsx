@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="bg-white">
         <div className="flex h-full w-full">
           <SideBar />
-          <SideBarMobile/>
+          {/* <SideBarMobile/> */}
           <div id="page" className="h-[3000px]">
             <Header />
             {children}
