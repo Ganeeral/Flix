@@ -7,6 +7,11 @@
   src: url("../ui/fonts/SFProText-Semibold.ttf") format('truetype');
 }
 
+@font-face {
+  font-family: SFDisplay;
+  src: url("../ui/fonts/SF-Pro-Display-Bold.otf") format('truetype');
+}
+
 html {
   scroll-behavior: smooth;
   min-width: 320px;
@@ -37,6 +42,27 @@ body {
   }
 }
 
+.container {
+  margin-left: 84px;
+}
+
+.video__title {
+  font-family: SFDisplay;
+}
+
+
+.video__content {
+  max-width: calc(90% - 30px);
+  width: 100%;
+}
+
+
+.video__footer {
+  /* background: linear-gradient(131.58deg, rgb(248, 248, 248) 12.961%, rgb(223, 223, 223) 83.126%);
+  backdrop-filter: blur(2px); */
+  border-radius: 0 0 16px 16px;
+}
+
 .sideBar {
   background: linear-gradient(136.55deg, rgb(50, 49, 50) 1.488%, rgb(0, 0, 0) 96.043%);
 }
@@ -50,6 +76,10 @@ body {
   position: absolute;
   left: -7px;
   top: -8px;
+}
+
+.lineMain {
+  background: linear-gradient(30deg, rgb(232, 63, 109), rgb(115, 41, 117));
 }
 
 .sideBar__item:hover .ringIcon {
@@ -89,8 +119,7 @@ body {
 }
 
 @media (min-width: 577px) {
-  .input__container{
+  .input__container {
     border-radius: 30px;
   }
 }
-

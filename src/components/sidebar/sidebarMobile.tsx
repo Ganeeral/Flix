@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import { useState, useEffect } from "react";
-import Separator from "../separator";
+import Separator from "../separator/separator";
 import React from "react";
 import { usePathname } from "next/navigation";
 
@@ -129,11 +129,11 @@ export default function Home() {
   };
 
   useEffect(() => {
-    showMore();
+    showLess();
   }, []);
 
   return (
-    <div className={`max-w-[248px] z-10 fixed flix:hidden w-full`} style={{maxWidth: isColumn ? "84px" : "248px"}}>
+    <div className={`max-w-[248px] z-30 fixed tablet-s:hidden w-full`} style={{maxWidth: isColumn ? "84px" : "248px"}}>
       <div className="max-w-[248px]">
         <motion.div
           animate={controls}
@@ -253,7 +253,7 @@ export default function Home() {
                         >
                           <div className="relative">
                             <item.icon className="icon" />
-                            <RingG className="ringIcon" />
+                            <RingGMobile className="ringIcon" />
                           </div>
                           <motion.p
                             animate={controlText}

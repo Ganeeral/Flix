@@ -29,7 +29,7 @@ const categories = [
 const Slider: React.FC = () => {
 
   return (
-    <div className="category flex">
+    <div className="category flex mt-[80px]">
       <div className="max-w-[100vw] overflow-hidden flix:max-w-[85vw]">
         <div className="flex items-center justify-between px-4">
           <div className="flex gap-x-6 rounded-[4px] overflow-auto scrollbar-hide relative">

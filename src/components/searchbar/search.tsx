@@ -12,7 +12,7 @@ const SearchBar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 650);
+      setIsMobile(window.innerWidth <= 790);
     };
     window.addEventListener("resize", handleResize);
     handleResize();
@@ -51,8 +51,8 @@ const SearchBar = () => {
           <SearchIcon />
         </div>
       ) : (
-        <form className="relative">
-          <div className="input__container relative">
+        <form className="relative flex w-[400px] flix:mt-[14px] flix:mb-[14px]">
+          <div className="input__container max-w-[1000px] flex w-full relative">
             <input
               type="search"
               placeholder="Введите запрос.."

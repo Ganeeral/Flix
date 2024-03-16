@@ -3,6 +3,7 @@ import "./globals.css";
 import SideBar from "@/components/sidebar/Sidebar";
 import Header from "@/components/header/header";
 import SideBarMobile from "@/components/sidebar/sidebarMobile";
+import HeaderMobile from "@/components/header/headerMobile";
 
 export const metadata: Metadata = {
   title: "Видеохостинг - Flix",
@@ -18,11 +19,10 @@ export default function RootLayout({
     <html lang="ru">
       <body className="bg-white">
         <div className="flex h-full w-full">
-          <SideBar />
-          {/* <SideBarMobile/> */}
           <div id="page" className="h-[3000px]">
+            <HeaderMobile />
             <Header />
-            {children}
+            <div className="tablet-s:ml-[84px]">{children}</div>
           </div>
         </div>
       </body>

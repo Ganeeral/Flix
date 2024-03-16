@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import { useState, useEffect } from "react";
-import Separator from "../separator";
+import Separator from "../separator/separator";
 import React from "react";
 import { usePathname } from "next/navigation";
 
@@ -108,7 +108,6 @@ export default function Home() {
 
     setActive(true);
   };
-
   const showLess = () => {
     setIsColumn(true);
     controls.start({
@@ -130,16 +129,19 @@ export default function Home() {
       opacity: 0,
     });
 
+
     setActive(false);
   };
 
   useEffect(() => {
-    showMore();
+    showLess();
   }, []);
 
   return (
-    <div className={`max-w-[248px] hidden z-10 flix:block w-full`} style={{maxWidth: isColumn ? "84px" : "248px"}}>
-      <div className={`max-w-[248px] flix:fixed `}>
+    <div
+      className={`max-w-[248px] hidden tablet-s:block w-full`}
+    >
+      <div className={`max-w-[248px] z-20 absolute `}>
         <motion.div
           animate={controls}
           className={`sideBar max-w-[248px] animate duration-300 relative flex flex-col py-10 h-screen group`}
@@ -222,7 +224,7 @@ export default function Home() {
                         >
                           <div className="relative">
                             <item.icon className="icon" />
-                            <RingG className="ringIcon" />
+                            <RingG className="ringIcon z-30" />
                           </div>
                           <motion.p
                             animate={controlTextUp}

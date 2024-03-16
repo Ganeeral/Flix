@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const music = () => {
   return (
-    <div>music</div>
-  )
-}
+    <>
+      <div className="">music</div>
+    </>
+  );
+};
 
-export default music
+export default music;

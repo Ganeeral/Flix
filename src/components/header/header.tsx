@@ -1,29 +1,24 @@
 import React from "react";
-import Search from "@/components/searchbar/search";
+import SearchBar from "@/components/searchbar/search";
 import HeaderLinks from "../headerLinks/headerLinks";
-import SideBarMobile from "@/components/sidebar/sidebarMobile";
-import cn from "classnames";
+import SideBar from "@/components/sidebar/Sidebar";
 
-const header = () => {
+const Header = () => {
   return (
-    <>
-      <header className="py-4 px-8 flex gap-x-[20px] items-center duration-300">
-        <div className="">
-          <SideBarMobile />
-          <div
-            className={cn("flex justify-end flex-grow", "flix:justify-center")}
-          >
-            <div className="cursor-pointer max-w-[442px] flix:w-full">
-              <Search />
-            </div>
-          </div>
-          <div>
-            <HeaderLinks />
-          </div>
+    <header className="fixed hidden tablet-s:block top-0 w-full bg-white z-20">
+      <div className="flex justify-between">
+        <div className="max-w-[248px] w-full ">
+          <SideBar />
         </div>
-      </header>
-    </>
+        <div className="flex-grow contents text-center">
+          <SearchBar />
+        </div>
+        <div className="mt-[18px] mr-[30px] ml-[56px]">
+          <HeaderLinks />
+        </div>
+      </div>
+    </header>
   );
 };
 
-export default header;
+export default Header;
