@@ -19,10 +19,10 @@ export default function RootLayout({
     <html lang="ru">
       <body className="bg-white">
         <div className="flex h-full w-full">
-          <div id="page" className="h-[3000px]">
+          <div id="page">
             <HeaderMobile />
             <Header />
-            <div className="tablet-s:ml-[84px]">{children}</div>
+            <div className="tablet-s:ml-[84px] mt-[80px]">{children}</div>
           </div>
         </div>
       </body>

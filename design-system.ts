@@ -28,13 +28,14 @@ export const indents = {
 }
 
 export const colors = {
+    authorPreview: '#B3B3B3',
     searchText: '#303030',
     nameChannel: '#616161',
     sideText: '#969696',
     'black-background': '#1C1D20',
     white: '#FFFFFF',
-    'gray-1': '#F4F4F7',
-    'gray-2': '#E1E2EA',
+    'gray-1': '#878787',
+    'gray-2': '#9D9D9D',
     'gray-3': '#89909A',
     'gray-3-lines': '#EDEDF4',
     'gray-text': '#838992',

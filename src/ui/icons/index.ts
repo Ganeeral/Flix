@@ -16,6 +16,13 @@ import ChevronRight from "@/ui/icons/chevronRight.svg";
 import RingG from "@/ui/icons/ringG.svg";
 import RingGMobile from "@/ui/icons/ringGMobile.svg";
 import BurgerIconMobile from "@/ui/icons/BurgerIconMobile.svg";
+import Kolok from "@/ui/icons/kolok.svg"
+import CommunityIcon from "@/ui/icons/communityIcon.svg"
+import SubsIcon from "@/ui/icons/subsIcon.svg"
+import VideosIcon from "@/ui/icons/videosIcon.svg"
+import HomeIcon from "@/ui/icons/homeIcon.svg"
+import TrashIcon from "@/ui/icons/trashIcon.svg"
+import PenciIcon from "@/ui/icons/pencilIcon.svg"
 
 export {
   BurgerIcon,
@@ -36,4 +43,11 @@ export {
   RingG,
   RingGMobile,
   BurgerIconMobile,
+  Kolok,
+  CommunityIcon,
+  SubsIcon,
+  VideosIcon,
+  HomeIcon,
+  TrashIcon,
+  PenciIcon,
 };

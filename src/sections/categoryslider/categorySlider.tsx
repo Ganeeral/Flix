@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 const categories = [
@@ -27,6 +27,11 @@ const categories = [
 ];
 
 const Slider: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState(0);
+
+  const handleCategoryClick = (index: number) => {
+    setSelectedCategory(index);
+  };
 
   return (
     <div className="category flex mt-[80px]">
@@ -36,7 +41,14 @@ const Slider: React.FC = () => {
             {categories.map((category, index) => (
               <div key={index} className="flex-shrink-0">
                 <Link href={category.to}>
-                  <div className="bg-[#5C5C5C] text-white text-sm px-4 py-2 rounded-[6px]">
+                  <div
+                    className={`cursor-pointer px-4 py-2 rounded-[6px] ${
+                      selectedCategory === index
+                        ? "bg-[#5C5C5C] text-white"
+                        : "bg-gray-1 text-white hover:bg-gray-2 duration-300"
+                    }`}
+                    onClick={() => handleCategoryClick(index)}
+                  >
                     {category.title}
                   </div>
                 </Link>

@@ -8,22 +8,16 @@ const headerLinks = () => {
   return (
     <>
       <div className="flex gap-x-[20px] items-center">
-        <Link legacyBehavior href={"/"}>
-          <a>
-            <CreateVideoIcon />
-          </a>
+        <Link href={"/"}>
+          <CreateVideoIcon />
         </Link>
-        <Link legacyBehavior href={"/"}>
-          <a>
-            <BellIcon />
-          </a>
+        <Link href={"/"}>
+          <BellIcon />
         </Link>
-        <Link legacyBehavior href={"/"}>
-          <a>
-            <div className="w-[36px] h-[36px] rounded-full flex justify-center items-center text-white bg-[#323132]">
-              A
-            </div>
-          </a>
+        <Link href={"/channel"}>
+          <div className="w-[36px] h-[36px] rounded-full flex justify-center items-center text-white bg-[#323132]">
+            A
+          </div>
         </Link>
       </div>
     </>
